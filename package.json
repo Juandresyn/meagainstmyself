@@ -5,17 +5,20 @@
   "author": "Nicolas Arteaga <nomeacuerdo@gmail.com>",
   "private": false,
   "scripts": {
-    "dev": "webpack-dev-server --inline --progress --config build/webpack.dev.conf.js",
+    "dev": "webpack-dev-server --inline --progress --config internals/build/webpack.dev.conf.js",
     "start": "npm run dev",
+    "generate": "plop --plopfile internals/generators/index.js",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
-    "lint": "eslint --ext .js,.vue src test/unit test/e2e/specs",
-    "build": "node build/build.js"
+    "lint": "eslint --ext .js,.vue app test/unit test/e2e/specs",
+    "build": "node internals/build/build.js"
   },
   "dependencies": {
+    "iview": "^2.9.2",
     "vue": "^2.5.2",
-    "vue-router": "^3.0.1"
+    "vue-router": "^3.0.1",
+    "vuex": "^3.0.1"
   },
   "devDependencies": {
     "autoprefixer": "^7.1.2",
@@ -54,6 +57,7 @@
     "node-notifier": "^5.1.2",
     "optimize-css-assets-webpack-plugin": "^3.2.0",
     "ora": "^1.2.0",
+    "plop": "^1.9.1",
     "portfinder": "^1.0.13",
     "postcss-import": "^11.0.0",
     "postcss-loader": "^2.0.8",
