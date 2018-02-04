@@ -3,13 +3,15 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';
-import App from './containers/App/App';
+import VueHelmet from 'vue-helmet';
+import App from './containers/App';
 import router from './router';
 
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
-Vue.config.productionTip = false;
+Vue.use(VueHelmet);
+Vue.config.productionTip = process.env.NODE_ENV === 'development';
 
 /* eslint-disable no-new */
 new Vue({

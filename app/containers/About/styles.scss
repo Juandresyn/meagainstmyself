@@ -1,0 +1,10 @@
+@import '../../styles/helpers/helpers';
+
+a {
+  color: $vue-green;
+
+  &.router-link-exact-active {
+    color: $vue-blue;
+    text-decoration: none;
+  }
+}

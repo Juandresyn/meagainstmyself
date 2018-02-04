@@ -4,9 +4,12 @@
   "description": "A Vue.js version of react-boilerplate",
   "author": "Nicolas Arteaga <nomeacuerdo@gmail.com>",
   "private": false,
+  "license": "ISC",
+  "homepage": "https://bitbucket.org/nomeacuerdo/vuejsboilerplate",
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config internals/build/webpack.dev.conf.js",
     "start": "webpack-dev-server --inline --progress --config internals/build/webpack.dev.conf.js",
+    "start_dev_server": "webpack-dev-server --inline --progress --config internals/build/webpack.dev.conf.js",
     "generate": "plop --plopfile internals/generators/index.js",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
@@ -14,9 +17,17 @@
     "lint": "eslint --ext .js,.vue app test/unit test/e2e/specs",
     "build": "node internals/build/build.js"
   },
+  "repository": {
+    "type": "git",
+    "url": "https://bitbucket.org/nomeacuerdo/vuejsboilerplate.git"
+  },
+  "bugs": {
+    "url": "https://bitbucket.org/nomeacuerdo/vuejsboilerplate/issues"
+  },
   "dependencies": {
     "iview": "^2.9.2",
     "vue": "^2.5.2",
+    "vue-helmet": "^1.1.5",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
   },

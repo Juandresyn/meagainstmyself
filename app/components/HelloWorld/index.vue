@@ -86,10 +86,10 @@
         <router-link to="/">Go to Home</router-link>
       </li>
       <li>
-        <router-link to="/foo">Go to Foo</router-link>
+        <router-link to="/about">Go to About</router-link>
       </li>
       <li>
-        <router-link to="/bar">Go to Bar</router-link>
+        <router-link to="/helloworld">Hello World</router-link>
       </li>
     </ul>
   </div>

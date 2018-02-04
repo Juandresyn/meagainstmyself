@@ -7,7 +7,7 @@
 
 <script>
 export default {
-  name: 'Vue Boilerplate',
+  name: 'Vue-Boilerplate-App',
 };
 </script>
 
