@@ -1,6 +1,6 @@
 <template>
   <div id="app">
-    <img :src="require('../../assets/logo.png')" />
+    <img src="/assets/logo.png" />
     <router-view/>
   </div>
 </template>
@@ -12,5 +12,5 @@ export default {
 </script>
 
 <style lang="scss" scoped>
-   @import 'styles.scss'
+   @import './styles.scss'
 </style>

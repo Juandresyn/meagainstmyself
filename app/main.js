@@ -3,15 +3,14 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
 import VueRouter from 'vue-router';
-import VueHelmet from 'vue-helmet';
+import VueHead from 'vue-head';
 import App from './containers/App';
 import router from './router';
 
 
 Vue.use(Vuex);
 Vue.use(VueRouter);
-Vue.use(VueHelmet);
-Vue.config.productionTip = process.env.NODE_ENV === 'development';
+Vue.use(VueHead);
 
 /* eslint-disable no-new */
 new Vue({
@@ -19,4 +18,17 @@ new Vue({
   router,
   components: { App },
   template: '<App/>',
+  head: {
+    title: {
+      inner: 'Vue.js Boilerplate',
+      complement: 'Homepage',
+    },
+    meta: [
+      { name: 'application-name', content: 'Vue.js Boilerplate', id: 'appName' },
+      { name: 'description', content: 'Vue.js Boilerplate', id: 'desc' },
+    ],
+    link: [
+      { rel: 'canonical', href: 'http://example.com/', id: 'canonical' },
+    ],
+  },
 });

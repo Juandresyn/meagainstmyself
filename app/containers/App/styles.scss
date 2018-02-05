@@ -1,10 +1,10 @@
-@import '../../styles/helpers/helpers';
+@import '../../styles/helpers/_helpers';
 
 #app {
-  font-family: 'Avenir', Helvetica, Arial, sans-serif;
+  font-family: $font-family;
   -webkit-font-smoothing: antialiased;
   -moz-osx-font-smoothing: grayscale;
   text-align: center;
-  color: $vue-blue;
+  color: $dark-gray;
   margin-top: 60px;
 }

@@ -1,10 +1,31 @@
-@import '../../styles/helpers/helpers';
+@import '../../styles/helpers/_helpers';
 
-a {
-  color: $vue-green;
+.homepage-container {
+  .breakpoint:after {
+    content: "xs";
+  }
 
-  &.router-link-exact-active {
-    color: $vue-blue;
-    text-decoration: none;
+  @include breakpoint("sm") {
+    .breakpoint:after {
+      content: "sm";
+    }
+  }
+
+  @include breakpoint("md") {
+    .breakpoint:after {
+      content: "md";
+    }
+  }
+
+  @include breakpoint("lg") {
+    .breakpoint:after {
+      content: "lg";
+    }
+  }
+
+  @include breakpoint("xl") {
+    .breakpoint:after {
+      content: "xl";
+    }
   }
 }

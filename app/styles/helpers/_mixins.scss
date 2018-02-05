@@ -1,0 +1,14 @@
+// Breakpoints
+@mixin breakpoint($class) {
+  @if $class == sm {
+    @media (min-width: $bp-sm) { @content; }
+  } @else if $class == md {
+    @media (min-width: $bp-md) { @content; }
+  } @else if $class == lg {
+    @media (min-width: $bp-lg) { @content; }
+  } @else if $class == xl {
+    @media (min-width: $bp-xl) { @content; }
+  } @else {
+    @warn "Breakpoint mixin supports: sm, md, lg, xl";
+  }
+}

@@ -1,34 +1,15 @@
 <template>
-  <div class="hello">
-    <vue-helmet title='Homepage' />
+  <div class="homepage-container">
     <h1>{{ msg }}</h1>
     <h2>Vue-boilerplate Homepage</h2>
+    <p v-text="mobileText"></p>
+    <p v-cloak v-text="currentBreakpoint" class="breakpoint"></p>
+
     <Menu />
-    <ul>
-      <li>
-        <router-link to="/">Home</router-link>
-      </li>
-      <li>
-        <router-link to="/about">About</router-link>
-      </li>
-      <li>
-        <router-link to="/helloworld">Hello World</router-link>
-      </li>
-    </ul>
   </div>
 </template>
 
-<script>
-export default {
-  name: 'Homepage',
-  data: () => (
-    {
-      msg: 'Homepage',
-    }
-  ),
-};
-</script>
-
+<script src="./Homepage.js"></script>
 <style lang="scss" scoped>
-   @import 'styles.scss'
+   @import './styles.scss'
 </style>
