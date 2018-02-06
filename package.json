@@ -26,6 +26,7 @@
   "dependencies": {
     "iview": "^2.9.2",
     "vue": "^2.5.2",
+    "vue-fast-axios": "^1.0.2",
     "vue-head": "^2.0.12",
     "vue-router": "^3.0.1",
     "vuex": "^3.0.1"
