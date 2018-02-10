@@ -1,7 +1,7 @@
 import Menu from '../../components/Menu';
 import { API_URL, API_ERROR } from '../../constants';
 
-class AboutService {
+class UserService {
   base = () => API_URL;
   defaultVMessage = () => API_ERROR;
   headers = () => ({});
@@ -12,7 +12,7 @@ class AboutService {
     },
   });
   methods = () => ({
-    getUsers: {
+    getUser: {
       method: 'get',
       route: 'users',
     },
@@ -20,23 +20,30 @@ class AboutService {
 }
 
 export default {
-  name: 'About',
+  name: 'User',
   data: () => (
     {
-      msg: 'About',
-      users: [],
+      id: 0,
+      msg: 'User',
+      user: [],
+      posts: [],
     }
   ),
   mounted() {
-    this.service = this.$serviceFactory(new AboutService(), this);
+    this.service = this.$serviceFactory(new UserService(), this);
     this.load();
   },
   methods: {
     async load() {
-      this.users = await this.service.call('getUsers');
+      this.id = this.$route.params.id;
+      this.user = await this.service.append(`/${this.$route.params.id}`).call('getUser');
+      this.posts = await this.service.append(`/${this.$route.params.id}/posts`).call('getUser');
     },
     validationError: (message) => {
       console.log(message);
+    },
+    showUserId: (id) => {
+      console.log('User ID:', id);
     },
   },
   components: {
@@ -45,10 +52,10 @@ export default {
   head: {
     title: {
       inner: 'Vue.js Boilerplate',
-      complement: 'About',
+      complement: 'User',
     },
     link: [
-      { rel: 'canonical', href: 'http://example.com/#/about/', id: 'canonical' },
+      { rel: 'canonical', href: 'http://example.com/#/user/', id: 'canonical' },
     ],
   },
 };
