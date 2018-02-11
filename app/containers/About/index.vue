@@ -12,6 +12,8 @@
         <strong>&lt;{{user.email}}&gt;</strong>
       </li>
     </ul>
+    <PreviousSection />
+    <PreviousPerson />
   </div>
 </template>
 

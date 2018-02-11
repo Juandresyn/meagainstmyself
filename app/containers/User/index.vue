@@ -9,6 +9,8 @@
         {{post.title}}
       </li>
     </ul>
+    <PreviousSection />
+    <PreviousPerson />
   </div>
 </template>
 

@@ -5,6 +5,8 @@
     <h2>Vue-boilerplate Homepage</h2>
     <p v-text="mobileText"></p>
     <p v-cloak v-text="currentBreakpoint" class="breakpoint"></p>
+    <PreviousSection />
+    <PreviousPerson />
   </div>
 </template>
 

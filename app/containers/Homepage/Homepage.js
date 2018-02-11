@@ -1,4 +1,7 @@
 import Menu from '../../components/Menu';
+import PreviousSection from '../../components/PreviousSection';
+import PreviousPerson from '../../components/PreviousPerson';
+import store from '../../store';
 
 export default {
   name: 'Homepage',
@@ -10,8 +13,13 @@ export default {
       currentBreakpoint: 'Your current breakpoint is: ',
     }
   ),
+  beforeDestroy() {
+    store.commit('SET_PREVIOUS_PAGE', this.msg);
+  },
   components: {
     Menu,
+    PreviousSection,
+    PreviousPerson,
   },
   head: {
     title: {

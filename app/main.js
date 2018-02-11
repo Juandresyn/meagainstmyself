@@ -6,7 +6,7 @@ import VueFastAxios from 'vue-fast-axios';
 import VueHead from 'vue-head';
 import App from './containers/App';
 import router from './router';
-// import store from './store';
+import store from './store';
 
 Vue.use(VueRouter);
 Vue.use(VueFastAxios);
@@ -16,6 +16,7 @@ Vue.use(VueHead);
 new Vue({
   el: '#app',
   router,
+  store,
   components: { App },
   template: '<App/>',
   head: {

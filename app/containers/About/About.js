@@ -1,5 +1,9 @@
+import { mapActions } from 'vuex';
 import Menu from '../../components/Menu';
+import PreviousSection from '../../components/PreviousSection';
+import PreviousPerson from '../../components/PreviousPerson';
 import { API_URL, API_ERROR } from '../../constants';
+import store from '../../store';
 
 class AboutService {
   base = () => API_URL;
@@ -31,16 +35,26 @@ export default {
     this.service = this.$serviceFactory(new AboutService(), this);
     this.load();
   },
+  beforeDestroy() {
+    store.commit('SET_PREVIOUS_PAGE', this.msg);
+  },
   methods: {
     async load() {
       this.users = await this.service.call('getUsers');
+      this.setPeopleList(this.users);
     },
     validationError: (message) => {
       console.log(message);
     },
+    ...mapActions([
+      'setPage',
+      'setPeopleList',
+    ]),
   },
   components: {
     Menu,
+    PreviousSection,
+    PreviousPerson,
   },
   head: {
     title: {
