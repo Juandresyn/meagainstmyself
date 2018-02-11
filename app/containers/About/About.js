@@ -43,8 +43,8 @@ export default {
       this.users = await this.service.call('getUsers');
       this.setPeopleList(this.users);
     },
-    validationError: (message) => {
-      console.log(message);
+    validationError(message) {
+      this.$log.error(message);
     },
     ...mapActions([
       'setPage',

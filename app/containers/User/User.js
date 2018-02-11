@@ -47,11 +47,11 @@ export default {
       this.posts = await this.service.append(`/${this.$route.params.id}/posts`).call('getUser');
       this.setPersonData(this.user);
     },
-    validationError: (message) => {
-      console.log(message);
+    validationError(message) {
+      this.$log.error(message);
     },
-    showUserId: (id) => {
-      console.log('User ID:', id);
+    showUserId(id) {
+      this.$log.debug('User ID:', id);
     },
     ...mapActions([
       'setPage',

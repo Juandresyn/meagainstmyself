@@ -4,13 +4,16 @@ import Vue from 'vue';
 import VueRouter from 'vue-router';
 import VueFastAxios from 'vue-fast-axios';
 import VueHead from 'vue-head';
+import VueLogger from 'vuejs-logger';
 import App from './containers/App';
 import router from './router';
 import store from './store';
+import * as config from './config';
 
 Vue.use(VueRouter);
 Vue.use(VueFastAxios);
 Vue.use(VueHead);
+Vue.use(VueLogger, config.loggerOptions);
 
 /* eslint-disable no-new */
 new Vue({
@@ -19,17 +22,5 @@ new Vue({
   store,
   components: { App },
   template: '<App/>',
-  head: {
-    title: {
-      inner: 'Vue.js Boilerplate',
-      complement: 'Homepage',
-    },
-    meta: [
-      { name: 'application-name', content: 'Vue.js Boilerplate', id: 'appName' },
-      { name: 'description', content: 'Vue.js Boilerplate', id: 'desc' },
-    ],
-    link: [
-      { rel: 'canonical', href: 'http://example.com/', id: 'canonical' },
-    ],
-  },
+  head: config.headOptions,
 });
