@@ -1,6 +1,5 @@
 <template>
   <div class="homepage-container">
-    <Menu pageName='Home'/>
     <h1>{{ msg }}</h1>
     <h2>Vue-boilerplate Homepage</h2>
     <p v-text="mobileText"></p>

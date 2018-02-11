@@ -1,14 +1,15 @@
 @import '../../styles/helpers/_helpers';
 
 .user-container {
+  text-align: left;
+
   .post-list {
-    align-items: center;
+    align-items: left;
     display: flex;
     flex-direction: column;
     justify-content: center;
     list-style: none;
     margin: auto;
-    width: 33%;
 
     li {
       align-self: flex-start;

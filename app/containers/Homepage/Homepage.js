@@ -1,4 +1,3 @@
-import Menu from '../../components/Menu';
 import PreviousSection from '../../components/PreviousSection';
 import PreviousPerson from '../../components/PreviousPerson';
 import store from '../../store';
@@ -17,7 +16,6 @@ export default {
     store.commit('SET_PREVIOUS_PAGE', this.msg);
   },
   components: {
-    Menu,
     PreviousSection,
     PreviousPerson,
   },

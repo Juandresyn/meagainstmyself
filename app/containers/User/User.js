@@ -1,5 +1,4 @@
 import { mapActions } from 'vuex';
-import Menu from '../../components/Menu';
 import PreviousSection from '../../components/PreviousSection';
 import PreviousPerson from '../../components/PreviousPerson';
 import { MOCK_API_URL, API_ERROR } from '../../constants';
@@ -59,7 +58,6 @@ export default {
     ]),
   },
   components: {
-    Menu,
     PreviousSection,
     PreviousPerson,
   },

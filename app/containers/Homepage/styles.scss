@@ -1,6 +1,8 @@
 @import '../../styles/helpers/_helpers';
 
 .homepage-container {
+  text-align: left;
+
   .breakpoint:after {
     content: "xs";
   }

@@ -1,6 +1,5 @@
 <template>
   <div class="about-container">
-    <Menu pageName='About'/>
     <h1>{{ msg }}</h1>
     <h2>Vue-boilerplate About page</h2>
     <h3>Mocked user list, retrieved using vue-fast-axios:</h3>
