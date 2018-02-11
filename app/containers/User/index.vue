@@ -1,6 +1,6 @@
 <template>
   <div class="user-container">
-    <Menu pageName='User' v-bind="{userId: id, label: 'Show User ID', showUserId}" />
+    <Menu pageName='User' v-bind="{userId: id, label: 'Show User ID on Console', showUserId}" />
     <h1>{{ msg }}</h1>
     <h2>Vue-boilerplate User: {{user.name}} (ID: {{id}})</h2>
     <h3>Posts: </h3>

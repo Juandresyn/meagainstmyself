@@ -2,11 +2,11 @@ import { mapActions } from 'vuex';
 import Menu from '../../components/Menu';
 import PreviousSection from '../../components/PreviousSection';
 import PreviousPerson from '../../components/PreviousPerson';
-import { API_URL, API_ERROR } from '../../constants';
+import { MOCK_API_URL, API_ERROR } from '../../constants';
 import store from '../../store';
 
 class AboutService {
-  base = () => API_URL;
+  base = () => MOCK_API_URL;
   defaultVMessage = () => API_ERROR;
   headers = () => ({});
   routes = () => ({

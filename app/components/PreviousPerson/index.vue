@@ -1,5 +1,5 @@
 <template>
-  <div v-if="$store.state.personData">
+  <div v-if="$store.state.personData.name">
     <small>
       The last person that you looked:
       <strong>{{$store.state.personData.name}}</strong><br>

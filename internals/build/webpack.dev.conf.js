@@ -9,9 +9,17 @@ const CopyWebpackPlugin = require('copy-webpack-plugin')
 const HtmlWebpackPlugin = require('html-webpack-plugin')
 const FriendlyErrorsPlugin = require('friendly-errors-webpack-plugin')
 const portfinder = require('portfinder')
+const MockWebpackPlugin = require('mock-webpack-plugin');
+const mockConfig = require('../config/mock.js');
+const mockRoutesArray = require('../utils/mapMockRoutes');
+const mockRoutesObject = {};
 
 const HOST = process.env.HOST
 const PORT = process.env.PORT && Number(process.env.PORT)
+
+mockRoutesArray.forEach((route) => {
+  mockRoutesObject[route] = `${config.dev.host}:3000/`;
+});
 
 const devWebpackConfig = merge(baseWebpackConfig, {
   module: {
@@ -45,6 +53,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
     }
   },
   plugins: [
+    new MockWebpackPlugin({
+      config: mockConfig,
+      port: 3000
+    }),
     new webpack.DefinePlugin({
       'process.env': require('../config/dev.env')
     }),
@@ -65,7 +77,10 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ])
-  ]
+  ],
+  devServer: {
+    proxy: mockRoutesObject
+  }
 })
 
 module.exports = new Promise((resolve, reject) => {
