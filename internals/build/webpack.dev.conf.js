@@ -77,10 +77,7 @@ const devWebpackConfig = merge(baseWebpackConfig, {
         ignore: ['.*']
       }
     ])
-  ],
-  devServer: {
-    proxy: mockRoutesObject
-  }
+  ]
 })
 
 module.exports = new Promise((resolve, reject) => {
