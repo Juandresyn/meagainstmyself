@@ -9,4 +9,7 @@ export const setPeopleList = ({ commit }, peopleList) => {
 export const setPersonData = ({ commit }, personData) => {
   commit(types.SET_PERSON_DATA, personData);
 };
+export const setErrorMessage = ({ commit }, errorMessage) => {
+  commit(types.SET_ERROR_MESSAGE, errorMessage);
+};
 

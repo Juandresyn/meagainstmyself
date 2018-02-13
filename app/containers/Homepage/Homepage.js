@@ -14,6 +14,7 @@ export default {
   ),
   beforeDestroy() {
     store.commit('SET_PREVIOUS_PAGE', this.msg);
+    store.commit('SET_ERROR_MESSAGE', '');
   },
   components: {
     PreviousSection,

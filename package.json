@@ -12,7 +12,7 @@
     "generate": "plop --plopfile internals/generators/index.js",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
-    "test": "npm run unit && npm run e2e",
+    "test": "(npm run unit && npm run e2e) || true",
     "lint": "eslint --ext .js,.vue app test/unit test/e2e/specs",
     "build": "node internals/build/build.js"
   },
@@ -24,6 +24,7 @@
     "url": "https://bitbucket.org/nomeacuerdo/vuejsboilerplate/issues"
   },
   "dependencies": {
+    "@vue/test-utils": "^1.0.0-beta.11",
     "iview": "^2.9.2",
     "vue": "^2.5.2",
     "vue-fast-axios": "^1.0.2",

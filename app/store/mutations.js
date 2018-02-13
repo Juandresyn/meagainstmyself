@@ -10,4 +10,7 @@ export const mutations = {
   [types.SET_PERSON_DATA](state, payload) {
     state.personData = payload;
   },
+  [types.SET_ERROR_MESSAGE](state, payload) {
+    state.errorMessage = payload;
+  },
 };

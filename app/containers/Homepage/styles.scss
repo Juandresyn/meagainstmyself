@@ -7,6 +7,12 @@
     content: "xs";
   }
 
+  @include breakpoint("xs") {
+    .breakpoint:after {
+      content: "xs";
+    }
+  }
+
   @include breakpoint("sm") {
     .breakpoint:after {
       content: "sm";

@@ -41,10 +41,18 @@ export default {
   },
   methods: {
     async load() {
-      this.id = this.$route.params.id;
-      this.user = await this.service.append(`/${this.$route.params.id}`).call('getUser');
-      this.posts = await this.service.append(`/${this.$route.params.id}/posts`).call('getUser');
-      this.setPersonData(this.user);
+      this.setErrorMessage('');
+      try {
+        this.id = this.$route.params.id;
+        this.user = await this.service.append(`/${this.$route.params.id}`).call('getUser');
+        this.posts = await this.service.append(`/${this.$route.params.id}/posts`).call('getUser');
+        this.setPersonData(this.user);
+      } catch (e) {
+        if (e.message === 'Network Error') {
+          this.setErrorMessage(`There was an error fetching the users. 
+            If you're using the mock server, be sure to use the CORS extension on your browser.`);
+        }
+      }
     },
     validationError(message) {
       this.$log.error(message);
@@ -55,6 +63,7 @@ export default {
     ...mapActions([
       'setPage',
       'setPersonData',
+      'setErrorMessage',
     ]),
   },
   components: {

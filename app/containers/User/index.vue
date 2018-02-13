@@ -8,6 +8,9 @@
         {{post.title}}
       </li>
     </ul>
+    <div class="errorMessage" v-if="$store.state.errorMessage">
+      {{$store.state.errorMessage}}
+    </div>
     <PreviousSection />
     <PreviousPerson v-bind="{userId: id, label: 'Show User ID on Console', showUserId}" />
   </div>

@@ -39,8 +39,17 @@ export default {
   },
   methods: {
     async load() {
-      this.users = await this.service.call('getUsers');
-      this.setPeopleList(this.users);
+      this.setErrorMessage('');
+      try {
+        this.users = await this.service.call('getUsers');
+        this.setPeopleList(this.users);
+      } catch (e) {
+        console.log('error', e.message);
+        if (e.message === 'Network Error') {
+          this.setErrorMessage(`There was an error fetching the users. 
+            If you're using the mock server, be sure to use the CORS extension on your browser.`);
+        }
+      }
     },
     validationError(message) {
       this.$log.error(message);
@@ -48,6 +57,7 @@ export default {
     ...mapActions([
       'setPage',
       'setPeopleList',
+      'setErrorMessage',
     ]),
   },
   components: {

@@ -9,6 +9,7 @@ export default new Store({
   modules: {},
   state: {
     previousSection: '',
+    errorMessage: '',
     peopleList: [],
   },
   mutations,

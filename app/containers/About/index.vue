@@ -11,6 +11,9 @@
         <strong>&lt;{{user.email}}&gt;</strong>
       </li>
     </ul>
+    <div class="errorMessage" v-if="$store.state.errorMessage">
+      {{$store.state.errorMessage}}
+    </div>
     <PreviousSection />
     <PreviousPerson />
   </div>

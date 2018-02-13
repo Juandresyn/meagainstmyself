@@ -16,4 +16,9 @@
       flex-grow: 1;
     }
   }
+
+  .errorMessage {
+    color: $red;
+    font-weight: bold;
+  }
 }
