@@ -1,0 +1,6 @@
+version: '2.0'
+services:
+  node-server:
+    build: .
+    ports:
+    - "80:80"
