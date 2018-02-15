@@ -16,6 +16,11 @@ export default {
     store.commit('SET_PREVIOUS_PAGE', this.msg);
     store.commit('SET_ERROR_MESSAGE', '');
   },
+  methods: {
+    lang(language) {
+      this.$i18n.locale = language;
+    },
+  },
   components: {
     PreviousSection,
     PreviousPerson,
