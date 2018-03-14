@@ -1,0 +1,10 @@
+@import './helpers/_helpers';
+
+.ivu-layout-sider-trigger {
+  background: transparent;
+  color: $dark-blue;
+
+  &:hover {
+    background: $light-silver;
+  }
+}

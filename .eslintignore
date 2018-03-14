@@ -1,0 +1,4 @@
+/internals/
+/dist/
+/*.js
+/test/unit/coverage/

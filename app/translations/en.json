@@ -1,0 +1,7 @@
+{
+  "message": {
+    "translations": "Look for the translations on the /app/translations folder.<br>You can also change the default locale on main.js",
+    "en": "English",
+    "es": "Spanish"
+  }
+}
