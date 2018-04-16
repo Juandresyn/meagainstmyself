@@ -5,9 +5,9 @@ import VueRouter from 'vue-router';
 import VueFastAxios from 'vue-fast-axios';
 import VueHead from 'vue-head';
 import VueLogger from 'vuejs-logger';
-import iView from 'iview';
+import vuetify from 'vuetify';
 import VueI18n from 'vue-i18n';
-import 'iview/dist/styles/iview.css';
+import 'vuetify/dist/vuetify.min.css';
 
 import App from './containers/App';
 import router from './router';
@@ -18,7 +18,7 @@ import messages from './translations';
 Vue.use(VueRouter);
 Vue.use(VueFastAxios);
 Vue.use(VueHead);
-Vue.use(iView);
+Vue.use(vuetify);
 Vue.use(VueI18n);
 Vue.use(VueLogger, config.loggerOptions);
 
