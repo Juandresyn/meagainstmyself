@@ -1,7 +1,7 @@
-import User from '../containers/User';
+import UserExample from '../containers/UserExample';
 
 export default {
   path: '/user/:id',
-  name: 'User',
-  component: User,
+  name: 'Users Example',
+  component: UserExample,
 };

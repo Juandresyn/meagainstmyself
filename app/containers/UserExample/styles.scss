@@ -1,0 +1,24 @@
+@import '../../styles/helpers/_helpers';
+
+.user-container {
+  text-align: left;
+
+  .post-list {
+    align-items: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    list-style: none;
+    margin: auto;
+
+    li {
+      align-self: flex-start;
+      flex-grow: 1;
+    }
+  }
+
+  .errorMessage {
+    color: $red;
+    font-weight: bold;
+  }
+}

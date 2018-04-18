@@ -1,7 +1,7 @@
-import Homepage from '../containers/Homepage';
+import HomepageExample from '../containers/HomepageExample';
 
 export default {
   path: '/',
-  name: 'Homepage',
-  component: Homepage,
+  name: 'Homepage Example',
+  component: HomepageExample,
 };
