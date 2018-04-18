@@ -1,13 +1,22 @@
 import SidebarMenu from '../../components/SidebarMenu';
 
 export default {
-  name: 'Vue-Boilerplate-App',
   data() {
     return {
-      isCollapsed: false,
+      name: 'Vue Boilerplate',
+      drawer: false,
     };
   },
+  methods: {
+    toggleDrawer() {
+      this.drawer = !this.drawer;
+      return this.drawer;
+    },
+  },
   computed: {
+    year() {
+      return new Date().getFullYear();
+    },
   },
   components: {
     SidebarMenu,

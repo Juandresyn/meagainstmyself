@@ -8,4 +8,4 @@
     <a v-if="userId" @click="showUserId(userId)">{{label}}</a>
   </div>
 </template>
-<script src='./PreviousPerson.js'></script>
+<script src='./PreviousPersonExample.js'></script>

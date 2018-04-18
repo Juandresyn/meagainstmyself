@@ -1,10 +1,10 @@
 import { mapActions } from 'vuex';
-import PreviousSection from '../../components/PreviousSection';
-import PreviousPerson from '../../components/PreviousPerson';
+import PreviousSectionExample from '../../components/PreviousSectionExample';
+import PreviousPersonExample from '../../components/PreviousPersonExample';
 import { MOCK_API_URL, API_ERROR } from '../../constants';
 import store from '../../store';
 
-class AboutService {
+class UserService {
   base = () => MOCK_API_URL;
   defaultVMessage = () => API_ERROR;
   headers = () => ({});
@@ -15,7 +15,7 @@ class AboutService {
     },
   });
   methods = () => ({
-    getUsers: {
+    getUser: {
       method: 'get',
       route: 'users',
     },
@@ -23,15 +23,17 @@ class AboutService {
 }
 
 export default {
-  name: 'About',
+  name: 'User-Example',
   data: () => (
     {
-      msg: 'About',
-      users: [],
+      id: 0,
+      msg: 'Users Example',
+      user: [],
+      posts: [],
     }
   ),
   mounted() {
-    this.service = this.$serviceFactory(new AboutService(), this);
+    this.service = this.$serviceFactory(new UserService(), this);
     this.load();
   },
   beforeDestroy() {
@@ -41,10 +43,11 @@ export default {
     async load() {
       this.setErrorMessage('');
       try {
-        this.users = await this.service.call('getUsers');
-        this.setPeopleList(this.users);
+        this.id = this.$route.params.id;
+        this.user = await this.service.append(`/${this.$route.params.id}`).call('getUser');
+        this.posts = await this.service.append(`/${this.$route.params.id}/posts`).call('getUser');
+        this.setPersonData(this.user);
       } catch (e) {
-        console.log('error', e.message);
         if (e.message === 'Network Error') {
           this.setErrorMessage(`There was an error fetching the users. 
             If you're using the mock server, be sure to use the CORS extension on your browser.`);
@@ -54,23 +57,26 @@ export default {
     validationError(message) {
       this.$log.error(message);
     },
+    showUserId(id) {
+      this.$log.debug('User ID:', id);
+    },
     ...mapActions([
       'setPage',
-      'setPeopleList',
+      'setPersonData',
       'setErrorMessage',
     ]),
   },
   components: {
-    PreviousSection,
-    PreviousPerson,
+    PreviousSectionExample,
+    PreviousPersonExample,
   },
   head: {
     title: {
       inner: 'Vue.js Boilerplate',
-      complement: 'About',
+      complement: 'User Example',
     },
     link: [
-      { rel: 'canonical', href: 'http://example.com/#/about/', id: 'canonical' },
+      { rel: 'canonical', href: 'http://example.com/#/user/', id: 'canonical' },
     ],
   },
 };

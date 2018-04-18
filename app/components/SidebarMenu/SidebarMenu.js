@@ -7,7 +7,7 @@ export default Vue.component('SidebarMenu', {
       routes: this.$router.options.routes,
       icons: [
         'home',
-        'information-circled',
+        'contact_mail',
       ],
       menuitemClasses: ['menu-item'],
     };
@@ -15,14 +15,6 @@ export default Vue.component('SidebarMenu', {
   methods: {
     menuItemIcon(index) {
       return this.icons[index];
-    },
-  },
-  computed: {
-    menuClasses() {
-      return [
-        'menu-component',
-        this.isCollapsed ? 'collapsed-menu' : '',
-      ];
     },
   },
 });
