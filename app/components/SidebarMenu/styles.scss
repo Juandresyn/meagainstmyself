@@ -1,48 +1,5 @@
 @import '../../styles/helpers/_helpers';
 
-.menu-component {
-  .menu-item {
-    color: $dark-blue;
-    text-align: left;
-
-    a {
-      color: $dark-blue;
-    }
-
-    i {
-      transform: translateX(0px);
-      transition: font-size .2s ease, transform .2s ease;
-      vertical-align: top;
-      font-size: 16px;
-    }
-
-    span {
-      display: inline-block;
-      overflow: hidden;
-      text-overflow: ellipsis;
-      white-space: nowrap;
-      vertical-align: bottom;
-    }
-
-    &:hover {
-      border-right: 3px solid $dark-blue;
-    }
-    &.ivu-menu-item-active {
-      border-right: 0;
-    }
-  }
-
-  &.collapsed-menu {
-    span {
-      width: 0px;
-      transition: width .2s ease;
-    }
-
-    i {
-      transform: translateX(5px);
-      transition: font-size .2s ease .2s, transform .2s ease .2s;
-      vertical-align: top;
-      font-size: 22px;
-    }
-  }
+.menu-item {
+  
 }

@@ -10,7 +10,7 @@
         <SidebarMenu />
       </v-list>
     </v-navigation-drawer>
-    <v-toolbar color="indigo" dark fixed app>
+    <v-toolbar color="primary" dark fixed app>
       <v-toolbar-side-icon @click.stop="toggleDrawer"></v-toolbar-side-icon>
       <v-toolbar-title>{{name}}</v-toolbar-title>
     </v-toolbar>
@@ -26,7 +26,7 @@
         </v-layout>
       </v-container>
     </v-content>
-    <v-footer color="indigo" app inset>
+    <v-footer color="secondary" app inset>
       <v-layout row wrap justify-center>
         <v-flex xs12 py-3 text-xs-center white--text>
           &copy; {{year}} - {{name}}
