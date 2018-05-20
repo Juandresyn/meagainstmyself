@@ -15,12 +15,12 @@
     </v-flex>
     <v-layout row>
       <v-flex xs12>
-        <PreviousSectionExample />
+        <!-- <PreviousSectionExample /> -->
       </v-flex>
     </v-layout>
     <v-layout row>
       <v-flex xs12>
-      <PreviousPersonExample v-bind="{userId: id, label: 'Show User ID on Console', showUserId}" />
+      <!-- <PreviousPersonExample v-bind="{userId: id, label: 'Show User ID on Console', showUserId}" /> -->
       </v-flex>
     </v-layout>
   </v-container>

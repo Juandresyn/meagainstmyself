@@ -9,7 +9,7 @@
   "scripts": {
     "dev": "webpack-dev-server --inline --progress --config internals/build/webpack.dev.conf.js",
     "start": "webpack-dev-server --inline --progress --config internals/build/webpack.dev.conf.js",
-    "generate": "plop --plopfile internals/generators/index.js",
+    "generate": "plop --plopfile plopfile.js",
     "unit": "jest --config test/unit/jest.conf.js --coverage",
     "e2e": "node test/e2e/runner.js",
     "test": "(npm run unit && npm run e2e) || true",
@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@vue/test-utils": "^1.0.0-beta.11",
+    "inquirer": "^5.2.0",
     "vue": "^2.5.2",
     "vue-fast-axios": "^1.0.2",
     "vue-head": "^2.0.12",

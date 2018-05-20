@@ -1,10 +1,10 @@
-import SidebarMenu from '../../components/SidebarMenu';
+import Header from '../../components/Header';
+import Hero from '../../components/Hero';
 
 export default {
   data() {
     return {
-      name: 'Vue Boilerplate',
-      drawer: false,
+      name: 'ME AGAINST MYSELF',
     };
   },
   methods: {
@@ -19,6 +19,7 @@ export default {
     },
   },
   components: {
-    SidebarMenu,
+    Header,
+    Hero,
   },
 };

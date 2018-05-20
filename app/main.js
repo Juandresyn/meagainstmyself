@@ -22,13 +22,7 @@ Vue.use(VueHead);
 Vue.use(VueI18n);
 Vue.use(Vuetify, {
   theme: {
-    primary: colors.indigo.darken4,
-    secondary: colors.indigo.lighten1,
-    accent: colors.red.base,
-    success: colors.green.darken2,
-    error: colors.red.darken2,
-    warning: colors.amber.darken1,
-    info: colors.blue.darken2,
+
   },
 });
 Vue.use(VueLogger, config.loggerOptions);

@@ -1,6 +1,4 @@
 import { mapActions } from 'vuex';
-import PreviousSectionExample from '../../components/PreviousSectionExample';
-import PreviousPersonExample from '../../components/PreviousPersonExample';
 import { MOCK_API_URL, API_ERROR } from '../../constants';
 import store from '../../store';
 
@@ -49,7 +47,7 @@ export default {
         this.setPersonData(this.user);
       } catch (e) {
         if (e.message === 'Network Error') {
-          this.setErrorMessage(`There was an error fetching the users. 
+          this.setErrorMessage(`There was an error fetching the users.
             If you're using the mock server, be sure to use the CORS extension on your browser.`);
         }
       }
@@ -67,8 +65,6 @@ export default {
     ]),
   },
   components: {
-    PreviousSectionExample,
-    PreviousPersonExample,
   },
   head: {
     title: {

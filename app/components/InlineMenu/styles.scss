@@ -1,0 +1,17 @@
+@import "../../styles/helpers/_variables.scss";
+@import '../../styles/components/_main-header.scss';
+
+.inline-menu {
+  &__ul {
+    list-style-type: none;
+  }
+
+  &__item {
+    display: inline-block;
+    padding: 5px;
+  }
+
+  &__link {
+    cursor: pointer;
+  }
+}

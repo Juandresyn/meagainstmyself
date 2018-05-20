@@ -1,15 +1,12 @@
-import PreviousSectionExample from '../../components/PreviousSectionExample';
-import PreviousPersonExample from '../../components/PreviousPersonExample';
-import LocalizationExample from '../../components/LocalizationExample';
+import FeatureItem from '../../components/FeatureItem';
 import store from '../../store';
 
 export default {
   name: 'Homepage-Example',
   data: () => (
     {
-      msg: 'Homepage Example',
-      mobileText: `This boilerplate uses mobile-first, so you'll find an example
-       of the mobile mixins on the stylesheet.`,
+      msg: 'Me Against My Self',
+      mobileText: 'Track your progress, get statistics and be better.',
       currentBreakpoint: 'Your current breakpoint is: ',
     }
   ),
@@ -23,14 +20,12 @@ export default {
     },
   },
   components: {
-    PreviousSectionExample,
-    PreviousPersonExample,
-    LocalizationExample,
+    FeatureItem,
   },
   head: {
     title: {
-      inner: 'Vue.js Boilerplate',
-      complement: 'Homepage Example',
+      inner: 'Me Against Myself',
+      complement: 'Homepage',
     },
     link: [
       { rel: 'canonical', href: 'http://example.com/', id: 'canonical' },

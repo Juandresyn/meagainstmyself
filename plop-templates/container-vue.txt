@@ -1,0 +1,9 @@
+<template>
+  <v-container class="{{lowerCase name}}-container">
+  </v-container>
+</template>
+
+<script src="./{{name}}.js"></script>
+<style lang="scss" scoped>
+   @import './styles.scss';
+</style>

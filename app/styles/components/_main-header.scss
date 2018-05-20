@@ -1,0 +1,99 @@
+@import "../helpers/_variables.scss";
+@import "../helpers/_mixins.scss";
+
+.main-header {
+  padding: 15px 30px;
+  background: $real-black;
+  text-align: initial;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  box-shadow: 0 -10px 20px 2px #000;
+
+  &__logo-wrapper {
+    display: flex;
+    align-items: center;
+  }
+
+  &__logo {
+    width: 40px;
+    display: inline-block;
+  }
+
+  &__logo + &__logo-text {
+    margin-left: 20px;
+
+    @include breakpoint("sm") {
+      margin-left: 30px;
+    }
+  }
+
+  &__logo-text,
+  &__logo-text a {
+    display: inline-block;
+    color: $clouds;
+    font-size: 20px;
+    text-decoration: none;
+    transition: all 200ms ease-in-out;
+
+    &:hover {
+      color: $red-darken2;
+    }
+
+    @include breakpoint("sm") {
+      font-size: 28px;
+    }
+  }
+
+  &__menu {
+    &__ul {
+    }
+
+    &__item {
+    }
+
+    &__link {
+      color: $clouds;
+      text-decoration: none;
+      font-weight: bold;
+      font-size: 16px;
+      transition: all 200ms ease-in-out;
+      text-transform: uppercase;
+      padding: 5px 10px 3px 10px;
+      box-shadow: 0 6px 6px -5px transparent;
+      user-select: none;
+
+      &:hover,
+      &.active {
+        box-shadow: 0 6px 6px -5px #ccc;
+      }
+    }
+  }
+}
+
+.inline-menu.horizontal {
+  .inline-menu {
+    &__ul {
+      padding: 20px 0;
+    }
+    &__item {
+      display: block;
+      padding: 15px 20px;
+      border-bottom: 1px solid #484848;
+
+      &:hover,
+      &:focus,
+      &.active {
+        background-color: $red-darken2;
+      }
+    }
+
+    &__link {
+      font-size: 20px;
+
+      &:hover {
+        box-shadow: none;
+      }
+    }
+  }
+}

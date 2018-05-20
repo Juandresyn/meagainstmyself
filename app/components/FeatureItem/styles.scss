@@ -1,0 +1,67 @@
+// Scss module for: FeatureItem
+@import '../../styles/helpers/_variables.scss';
+@import '../../styles/helpers/_helpers';
+
+.feature-item {
+  position: relative;
+
+  &__title {
+    margin-bottom: 20px;
+    margin-top: 35px;
+    text-transform: uppercase;
+    font-family: $font-family--secondary;
+
+    @include breakpoint("md") {
+      margin-top: 0;
+    }
+  }
+
+  &__image {
+
+    &--bg {
+      position: relative;
+      height: 400px;
+      width: 100%;
+      border-radius: 3px;
+      overflow: hidden;
+      background-size: cover;
+      background-position: top center;
+    }
+  }
+
+  &__byline {
+    cursor: pointer;
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    z-index: 2;
+    padding: 10px 20px;
+    font-size: 12px;
+
+    background: rgba(246,246,246,0);
+    background: -moz-linear-gradient(left, rgba(246,246,246,0) 0%, rgba(255,255,255,0) 0%, rgba(235,235,235,0) 8%, rgba(0,0,0,1) 100%);
+    background: -webkit-gradient(left top, right top, color-stop(0%, rgba(246,246,246,0)), color-stop(0%, rgba(255,255,255,0)), color-stop(8%, rgba(235,235,235,0)), color-stop(100%, rgba(0,0,0,1)));
+    background: -webkit-linear-gradient(left, rgba(246,246,246,0) 0%, rgba(255,255,255,0) 0%, rgba(235,235,235,0) 8%, rgba(0,0,0,1) 100%);
+    background: -o-linear-gradient(left, rgba(246,246,246,0) 0%, rgba(255,255,255,0) 0%, rgba(235,235,235,0) 8%, rgba(0,0,0,1) 100%);
+    background: -ms-linear-gradient(left, rgba(246,246,246,0) 0%, rgba(255,255,255,0) 0%, rgba(235,235,235,0) 8%, rgba(0,0,0,1) 100%);
+    background: linear-gradient(to right, rgba(246,246,246,0) 0%, rgba(255,255,255,0) 0%, rgba(235,235,235,0) 8%, rgba(0,0,0,1) 100%);
+    filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#f6f6f6', endColorstr='#000000', GradientType=1 );
+
+    a,
+    span {
+      font-family: $font-family-serif !important;
+      color: #fff;
+      text-decoration: none;
+
+      &:hover {
+        text-decoration: underline;
+      }
+    }
+  }
+
+  &--home {
+    @include breakpoint("md") {
+      padding: 30px 25px;
+    }
+  }
+}

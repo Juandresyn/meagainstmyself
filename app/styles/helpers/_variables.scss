@@ -1,12 +1,15 @@
 // Fonts
 $global-font-size: 16;
 $navigation-font-size: 14;
-$font-family: 'Avenir', Helvetica, Arial, sans-serif;
+$font-family: 'Open Sans', sans-serif, Helvetica, Arial, sans-serif;
+$font-family--secondary: 'Roboto Condensed', sans-serif, Helvetica, Arial, sans-serif;
+$font-family-serif: 'Noto Serif', serif;
 
 // Colors
 $vue-green:       #42b983;
 $vue-blue:        #2c3e50;
 
+$electromagnetic: #2f3640;
 $indigo-lighten1: #5c6bc0;
 $indigo-darken4:  #1a237e;
 $blue-darken2:    #1976d2;
@@ -14,10 +17,12 @@ $red-base:        #f44336;
 $red-darken2:     #d32f2f;
 $amber-darken1:   #ffb300;
 $green-darken2:   #388e3c;
+$clouds:          #ecf0f1;
+$real-black:      #141215;
 $black:           #000000;
 $white:           #ffffff;
 
-$primary: $indigo-darken4;
+$primary: $electromagnetic;
 $secondary: $indigo-lighten1;
 $accent: $red-base;
 $success: $green-darken2;

@@ -1,0 +1,16 @@
+@import url('https://fonts.googleapis.com/css?family=Noto+Serif|Open+Sans|Roboto+Condensed');
+
+html, body {
+  *:not(i) {
+    font-family: $font-family--secondary;
+  }
+}
+
+body {
+  .primary {
+    &--text {
+      color: $vue-blue !important;
+    }
+  }
+}
+
