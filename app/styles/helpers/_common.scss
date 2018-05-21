@@ -14,3 +14,12 @@ body {
   }
 }
 
+.flex {
+  &-a {
+    &-i {
+      &-center {
+        align-items: center;
+      }
+    }
+  }
+}

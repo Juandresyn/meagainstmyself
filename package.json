@@ -25,6 +25,7 @@
   },
   "dependencies": {
     "@vue/test-utils": "^1.0.0-beta.11",
+    "amcharts3": "amcharts/amcharts3",
     "inquirer": "^5.2.0",
     "vue": "^2.5.2",
     "vue-fast-axios": "^1.0.2",

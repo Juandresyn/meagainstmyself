@@ -1,5 +1,7 @@
 <template>
-  <v-container class="application-container">
+  <v-container class="application application-container">
+    <UserBanner></UserBanner>
+    <UserContent></UserContent>
   </v-container>
 </template>
 

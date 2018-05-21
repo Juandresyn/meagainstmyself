@@ -1,1 +1,5 @@
-// Scss module for: {{name}}
+// Scss container for: {{name}}
+
+.{{lowerCase name}} {
+
+}

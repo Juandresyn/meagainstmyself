@@ -1,3 +1,6 @@
+import UserBanner from '../../components/UserBanner';
+import UserContent from '../../components/UserContent';
+
 export default {
   data: () => ({
   }),
@@ -6,5 +9,7 @@ export default {
   computed: {
   },
   components: {
+    UserBanner,
+    UserContent,
   },
 };

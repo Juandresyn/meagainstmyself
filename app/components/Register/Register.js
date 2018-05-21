@@ -4,6 +4,8 @@ export default Vue.component('Register', {
   data: () => ({
     valid: false,
     terms: false,
+    date: '',
+    dateModal: false,
     termsRules: [
       v => !!v || 'Please accept the T&C',
     ],
@@ -11,7 +13,7 @@ export default Vue.component('Register', {
     nameRules: [
       v => !!v || 'Name is required',
     ],
-    age: '',
+    age: 0,
     ageRules: [
       v => !!v || 'Age is required',
       v => v.length === 2 || 'Age must be 2 numbers',
@@ -41,11 +43,34 @@ export default Vue.component('Register', {
     ],
     trainningTime: '',
   }),
+  computed: {
+    computedDateFormatted() {
+      return this.formatDate(this.date);
+    },
+  },
   methods: {
     submit() {
       if (this.$refs.loginform.validate() && this.terms) {
         console.log('submited');
       }
+    },
+    formatDate(date) {
+      if (!date) return null;
+      this.age = this.getAge(date);
+
+      const [year, month, day] = date.split('-');
+      return `${month}/${day}/${year}`;
+    },
+    getAge(dateString) {
+      debugger;
+      const today = new Date();
+      const birthDate = new Date(dateString);
+      let age = today.getFullYear() - birthDate.getFullYear();
+      const m = today.getMonth() - birthDate.getMonth();
+      if (m < 0 || (m === 0 && today.getDate() < birthDate.getDate())) {
+        age -= 1;
+      }
+      return age;
     },
   },
   components: {

@@ -1,0 +1,51 @@
+// Scss module for: UserBanner
+@import '../../styles/helpers/_helpers';
+
+.userbanner {
+  width: 100%;
+  position: relative;
+
+  &__metadata {
+    margin-top: 25px;
+    position: absolute;
+    text-align: center;
+    left: 0;
+    right: 0;
+
+    @include breakpoint("md") {
+      text-align: left;
+      margin-top: 0;
+      position: static;
+    }
+  }
+
+  &-metadata {
+    &__level {
+      white-space: nowrap;
+      display: block;
+      margin-left: -10px;
+
+      @include breakpoint("md") {
+        display: inline;
+        margin-left: 0;
+
+        &::before {
+          content: '|';
+          padding-left: 5px;
+          padding-right: 3px;
+        }
+      }
+    }
+  }
+
+  &__actions {
+    text-align: right;
+    position: absolute;
+    right: 0px;
+    bottom: 20px;
+
+    * {
+      cursor: pointer;
+    }
+  }
+}

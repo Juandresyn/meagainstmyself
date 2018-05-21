@@ -1,0 +1,17 @@
+// Scss module for: Avatar
+@import '../../styles/helpers/_variables.scss';
+@import '../../styles/helpers/_helpers';
+
+.avatar {
+
+  &__image {
+    border: 7px solid $border--red;
+    border-radius: 3px;
+    box-shadow: 0 6px 13px -6px $shadow;
+    max-width: 150px;
+
+    @include breakpoint("md") {
+      max-width: 200px;
+    }
+  }
+}

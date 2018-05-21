@@ -1,5 +1,5 @@
 <template>
-  <div>
+  <div class="{{lowerCase name}} {{lowerCase name}}-component">
   </div>
 </template>
 

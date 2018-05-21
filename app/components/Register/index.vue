@@ -32,17 +32,6 @@
         counter
         required
       ></v-text-field>
-      <v-text-field
-        v-model="password"
-        :rules="passRules"
-        :type="password"
-        name="input-10-1"
-        label="Confirm your password"
-        hint="At least 8 characters"
-        min="8"
-        counter
-        required
-      ></v-text-field>
       <v-layout row wrap>
         <v-flex xs12 sm4>
           <v-text-field
@@ -54,7 +43,7 @@
         </v-flex>
         <v-flex xs12 sm1>
         </v-flex>
-        <v-flex xs12 sm4>
+        <v-flex xs12 sm3>
           <v-text-field
             v-model="country"
             :rules="countryRules"
@@ -64,14 +53,30 @@
         </v-flex>
         <v-flex xs12 sm1>
         </v-flex>
-        <v-flex xs12 sm2>
-          <v-text-field
-            v-model="age"
+        <v-flex xs12 sm6 md3>
+          <v-dialog
+            ref="dialog"
             :rules="ageRules"
-            label="Your Age"
-            number
-            required
-          ></v-text-field>
+            v-model="dateModal"
+            :return-value.sync="date"
+            persistent
+            lazy
+            full-width
+            width="290px"
+          >
+            <v-text-field
+              slot="activator"
+              v-model="computedDateFormatted"
+              label="Birth Date"
+              readonly
+              required
+            ></v-text-field>
+            <v-date-picker v-model="date" scrollable>
+              <v-spacer></v-spacer>
+              <v-btn flat color="primary" @click="dateModal = false">Cancel</v-btn>
+              <v-btn flat color="primary" @click="$refs.dialog.save(date)">OK</v-btn>
+            </v-date-picker>
+          </v-dialog>
         </v-flex>
       </v-layout>
       <v-container fluid>
