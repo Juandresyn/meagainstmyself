@@ -1,9 +1,10 @@
 import Vue from 'vue';
 import Hero from '../../components/Hero';
 import Avatar from '../../components/Avatar';
+import PrLogger from '../../components/PrLogger';
 
 export default Vue.component('UserBanner', {
-  props: ['some-prop'],
+  props: ['dataInfo'],
   data: () => ({
     user: {
       name: 'Juandres',
@@ -16,6 +17,7 @@ export default Vue.component('UserBanner', {
     avatar: {
       top: '-100%',
     },
+    showNewRPForm: false,
   }),
   methods: {
     trainningIcon() {
@@ -33,9 +35,13 @@ export default Vue.component('UserBanner', {
     uppercase(string) {
       return string.toUpperCase();
     },
+    toggleNewRPForm() {
+      this.showNewRPForm = !this.showNewRPForm;
+    },
   },
   components: {
     Hero,
     Avatar,
+    PrLogger,
   },
 });

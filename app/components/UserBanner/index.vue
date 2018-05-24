@@ -15,6 +15,7 @@
           fab
           dark
           small
+          @click.stop="toggleNewRPForm()"
           color="success"
           slot="activator">
           <v-icon dark>add</v-icon>
@@ -27,6 +28,22 @@
       :alt="user.name"
       :topPosition="avatar.top"
     />
+    <v-dialog v-model="showNewRPForm" max-width="500px">
+      <v-card>
+        <v-card-title>
+        <h2 class="primary--text">
+          Log new PR
+          <v-icon color="red">how_to_reg</v-icon>
+        </h2>
+        <v-btn color="primary" class="close-modal right" flat icon @click.stop="toggleNewRPForm()"><v-icon>clear</v-icon></v-btn>
+        </v-card-title>
+        <v-card-actions>
+          <v-container fluid class="">
+            <PrLogger :data="dataInfo" :newform="true"/>
+          </v-container>
+        </v-card-actions>
+      </v-card>
+    </v-dialog>
   </div>
 </template>
 

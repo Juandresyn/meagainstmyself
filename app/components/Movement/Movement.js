@@ -8,7 +8,7 @@ export default Vue.component('Movement', {
   }),
   methods: {
     reacyCharts(list) {
-      list.map(i => window.AmCharts.makeChart(`chartdiv-${i.id}`, {
+      list.map((i, index) => window.AmCharts.makeChart(`chartdiv-${i.id}`, {
         type: 'serial',
         categoryField: 'type',
         chartCursor: {},

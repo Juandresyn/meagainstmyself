@@ -1,7 +1,7 @@
 <template>
   <v-container class="application application-container">
-    <UserBanner></UserBanner>
-    <UserContent></UserContent>
+    <UserBanner :dataInfo="movementsList"></UserBanner>
+    <UserContent :dataInfo="movementsList"></UserContent>
   </v-container>
 </template>
 
